@@ -55,7 +55,7 @@ public class MapperProxyClassGenerator implements Opcodes {
   public byte[] setClassCode(ClassModel cm) {
     String fullNameType = getFullNameType(cm);
 
-    ClassWriter cw = new ClassWriter(0);
+    ClassWriter cw = new ClassWriter(ClassWriter.COMPUTE_FRAMES);
     // public class XXX extends Object implement XXX
     cw.visit(
         V1_8,
